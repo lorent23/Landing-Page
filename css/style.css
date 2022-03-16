@@ -248,7 +248,9 @@
         height: 50%;
         background: url("../img/quote/quote-section.png") no-repeat fixed;
         background-size: cover;
-        position: center;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
     }
     #block-quote-text {
     
@@ -362,6 +364,7 @@
     #team-achievements {
         background-image: url(../img/stats/fun-facts.png);
         background-position: center;
+        background-attachment: fixed;
         background-size: cover;
         overflow: hidden;
         min-width: auto;
@@ -423,7 +426,11 @@
 
     /*TOP-NOTCH-SERVICES*/
     #TOP-NOTCH-SERVICES {
-        background: url(../img/services/our-services.png) center no-repeat fixed;
+        background: url(../img/services/our-services.png) fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
         height:auto;
         padding-bottom: 80px;
         padding-top:50px;
