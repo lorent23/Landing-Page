@@ -144,18 +144,24 @@ $(function () {
 /* =========================================
               Navigation
 ============================================ */
+const nav = document.getElementById('nav');
+let scrolled = false;
 
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if (scroll > 300) {
-          $(".header-menu").css("background" , "white");
-        }
-        else{
-            $(".header-menu").css("background" , "black");  	
-        }
-    })
-  })
+window.onscroll = function () {
+  if (window.pageYOffset > 400) {
+    nav.classList.remove('top');
+    if (!scrolled) {
+      nav.style.transform = 'translateY(-70px)';
+    }
+    setTimeout(function () {
+      nav.style.transform = 'translateY(0)';
+      scrolled = true;
+    }, 200);
+  } else {
+    nav.classList.add('top');
+    scrolled = false;
+  }
+};
 /* =========================================
                 Animation
 ============================================ */

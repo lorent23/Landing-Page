@@ -1,7 +1,9 @@
     /*html and body*/ 
     html, body {
         height: 100%;
-
+        margin: 0px;
+        padding: 0px;
+        font-family: "Poppins",sans-serif;
     }
     body {
         color: #212226;
@@ -26,20 +28,20 @@
         padding: 35px 0 10px 0;
         -webkit-transition: all 300ms linear;
         transition: all 300ms linear;
-        background: white;
+        background: transparent;
+        display: flex;
+        justify-content:center;
         width:100%;
         height: 60px;
     }
     #navbar-top{
         position: fixed;
-        padding-left:20px;
     }
 
     #navbarNav{
         text-align:center;
         justify-content: center;
     }
-
     #logo-main a{
         color: white;
     }
@@ -88,8 +90,10 @@
         background-position: center;
         background-size: cover;
         overflow: hidden;
+        animation: grow infinite alternate  8s;
       }
- 
+      
+
     #home-overlay {
         background-color: rgba(0,0,0,0.8);
         width: 100%;
@@ -496,7 +500,6 @@
         background: transparent;
         -webkit-box-shadow: none;
         box-shadow: none;
-        padding-right: 35px;
         outline: 0;
     }
     
@@ -610,11 +613,11 @@
     
     /*Get Connected*/
     #GET-CONNECTED {
-        height:40%;
+        height: auto;
         padding: 40px 0px 40px 0px;
         background-image: url("../img/socials/get-connected.jpg");
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
         background-repeat: no-repeat;
     }
     #GET-CONNECTED h2 {
@@ -625,12 +628,16 @@
     }
     #GET-CONNECTED i {
     float:top;
-    padding: 10px 10px 10px 10px;
+    padding: 12px 10px 10px 10px;
     font-size: 48px;
+    background-color:rgba(128, 128, 128, 0.479);
+    border-radius:100%;
+    width: 73px;
+    height: 73px;
     }
 
     #GET-CONNECTED i:hover {
-        color: #f4c613;
+        background-color: #f4c613;
         transition: 0.5s;
     }
 
